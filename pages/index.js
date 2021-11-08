@@ -28,6 +28,22 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
           rel="stylesheet"
         />
+         <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-BTEVP7N9QD`}
+          />
+        <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BTEVP7N9QD', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
       </Head>
 
       <main className="flex-grow">
