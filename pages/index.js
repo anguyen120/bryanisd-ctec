@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
+import About from "../components/About";
 import MissionStatement from "../components/MissionStatement";
 import Cta from "../components/Cta";
 import Contact from "../components/Contact";
@@ -11,6 +11,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen overflow-hidden">
       <Head>
         <meta charSet="utf-8" />
+        <title>Bryan ISD CTE Home</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content="Bryan ISD CTE Home" />
@@ -19,7 +20,7 @@ export default function Home() {
           content="Bryan Independent School District serves K-12th grade students and is located in Bryan, TX."
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
           rel="stylesheet"
@@ -28,13 +29,13 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
           rel="stylesheet"
         />
-         <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=G-BTEVP7N9QD`}
-          />
         <script
-            dangerouslySetInnerHTML={{
-              __html: `
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-BTEVP7N9QD`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -42,15 +43,15 @@ export default function Home() {
               page_path: window.location.pathname,
             });
           `,
-            }}
-          />
+          }}
+        />
       </Head>
 
       <main className="flex-grow">
-        <Header />
         <Hero />
         <MissionStatement />
         <Cta />
+        <About />
         <Contact />
         <Footer />
       </main>

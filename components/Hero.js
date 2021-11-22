@@ -1,36 +1,29 @@
+import Header from "./Header";
+
 export default function Hero() {
   return (
-    <section class="text-gray-600 body-font">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-          <img
-            class="object-cover object-center rounded"
-            alt="hero"
-            src="https://dummyimage.com/720x600"
-          />
-        </div>
-        <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1 class="font-mono sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            Before they sold out
-            <br class="hidden lg:inline-block" />
-            readymade gluten
-          </h1>
-          <p class="mb-8 leading-relaxed">
-            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
-            plant cold-pressed tacos poke beard tote bag. Heirloom echo park
-            mlkshk tote bag selvage hot chicken authentic tumeric truffaut
-            hexagon try-hard chambray.
-          </p>
-          <div class="flex justify-center">
-            <button class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
-              Apply
-            </button>
-            <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-              Contact us
-            </button>
+    <section className="bg-primary h-screen">
+      <Header />
+      <section className="text-primary-content mt-20">
+        <div className="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
+          <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
+            <h1 className="mb-8 text-2xl font-black tracking-tighter md:text-5xl font-mono">
+              Empowering Today's Students for Tomorrow Today.
+            </h1>
+            <p className="mb-8 text-base leading-relaxed text-left">
+              The CTE Program nurtures students while they explore the available
+              career paths and offers customized learning opportunities to help
+              them reach their goals.
+            </p>
+            <div className="flex flex-col justify-center lg:flex-row">
+              <button className="btn btn-secondary rounded-btn text-secondary-content">
+                Apply now
+              </button>
+            </div>
           </div>
+          <div className="w-full lg:w-1/3 lg:max-w-lg md:w-1/2" />
         </div>
-      </div>
+      </section>
     </section>
   );
 }
